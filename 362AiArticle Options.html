@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATHLETIC INSIGHT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: #fff;
+        }
+        header {
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 5px;
+            position: relative;
+        }
+        footer {
+            background-color: darkred;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+        }
+        h1 {
+            font-size: 32px;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            color: black;
+        }
+        nav {
+            color: darkred;
+            text-align: right;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-left: 10px;
+        }
+        nav ul li:first-child {
+            margin-left: 0;
+        }
+        nav ul li a {
+            color: darkred;
+            text-decoration: none;
+        }
+        .search-bar {
+            margin-top: 20px;
+            text-align: center;
+        }
+        .article-container {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        .article-container img {
+            margin-right: 20px;
+            max-width: 80px;
+            height: auto;
+        }
+        h2 {
+            text-align: left;
+        }
+        .article-container h3 a {
+            color: rgb(255, 255, 255);
+            text-decoration: none;
+        }
+        /* Logo styling */
+        .logo {
+            position: absolute;
+            top: 5px;
+            left: 10px;
+            width: 100px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="LogoAI.jpeg.png" alt="Athletic Insight Logo" class="logo">
+        <div>
+            <h1>ATHLETIC INSIGHT</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="362AiArticle Options.html">ANALYSIS</a></li>
+                <li><a href="Search.html">SCORES</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for Articles..." oninput="searchArticles()">
+    </div>
+    <section>
+        <h2>Analysis</h2>
+        <div class="article-container">
+            <img class="small-image" src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/rockcms/2024-04/240408-dawn-staley-championship-wm-317p-69a92c.jpg" alt="Super Bowl Preview">
+            <div>
+                <h3><a href="SCAR.html">Dawn's Dynasty is Born</a></h3>
+                <p>A recap of the Gamecocks' third championship since 2017-- yet again lead by a star Big.</p>
+            </div>
+        </div>
+        <div class="article-container">
+            <img class="small-image" src="https://ca-times.brightspotcdn.com/dims4/default/0335932/2147483647/strip/true/crop/4200x2800+0+0/resize/1200x800!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F71%2F6e%2F6474b46c4a329a19518a839c3dd2%2F1375374-sp-usc-ucla-151-gmf.jpg" alt="Super Bowl Preview">
+            <div>
+                <h3><a href="CalebWilliams.html">Caleb Williams to the Bears?</a></h3>
+                <p>A look at how the Bears will look once the 2022 Heisman Winner is in the building.</p>
+            </div>
+        </div>
+        <div class="article-container">
+            <img class="small-image" src="https://www.the-sun.com/wp-content/uploads/sites/6/2024/03/30-celebrates-basket-duke-first-888202123.jpg" alt="MarchMadness">
+            <div>
+                <h3><a href="MarchMadness.html">March Madness Preview: What March Is All About</a></h3>
+                <p>Taking a look at the Men's Final Four Matchups.</p>
+            </div>
+        </div>
+        <div class="article-container">
+            <img class="" src="https://www.masslive.com/resizer/vJiNsq_NPgJo0MmpQMsG5kImIQg=/1280x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/YZ2ZOK7AQRGLZNL34WLE3MMA3Q.jpg" alt="Terry Rozier">
+            <div>
+                <h3><a href="TerryRozier.html">Rozier's Impact in Miami</a></h3>
+                <p>An analysis of Terry Rozier's play in South Beach.</p>
+            </div>
+        </div>
+        <div class="article-container">
+            <img class="small-image" src="https://www.thebaltimorebanner.com/resizer/siG8Tsvv2Do_RyEBKQwt4-zREKI=/1440x0/filters:format(jpg):quality(70):focal(2047x494:2057x504)/cloudfront-us-east-1.images.arcpublishing.com/baltimorebanner/BVXVMN3FK5FJ5NMWGTLV2JLG6Y.jpg" alt="Challenging Times in the Big Easy">
+            <div>
+                <h3><a href="AiArticle.html">Recapping NFL Free Agency</a></h3>
+                <p>Taking a look at the busiest NFL Free Agency period in years.</p>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p> Follow on all Social Media Platforms @athleticinsight.</p>
+    </footer>
+    <script>
+        function searchArticles() {
+            const searchInput = document.getElementById('search-input').value.toLowerCase();
+            const articles = document.querySelectorAll('.article-container');
+            articles.forEach(article => {
+                const title = article.querySelector('h3').textContent.toLowerCase();
+                const description = article.querySelector('p').textContent.toLowerCase();
+                if (title.includes(searchInput) || description.includes(searchInput)) {
+                    article.style.display = 'flex';
+                } else {
+                    article.style.display = 'none';
+                }
+            });
+        }
+    </script>
+</body>
+</html>

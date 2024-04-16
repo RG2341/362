@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;">
+    <title>Athletic Insight</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: rgb(0, 0, 0); /* Set font color to black */
+        }
+        header div, footer {
+            text-align: center; /* Center align text */
+        }
+        header div {
+            padding: 0 20px; /* Added padding to the header */
+        }
+        header div h1 {
+            color: #000000; /* Set font color of "Athletic Insight" to black */
+            margin: 10px; /* Reset margin */
+        }
+        header nav ul li a {
+            color: darkred; /* Set font color of menu items to dark red */
+            text-decoration: none;
+        }
+        header nav ul li a:hover {
+            text-decoration: underline; /* Add underline on hover for menu items */
+        }
+        header {
+            background-color: rgb(255, 255, 255);
+            color: rgb(0, 0, 0);
+            text-align: center;
+            padding: 0px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        footer {
+    background-color: rgb(133, 133, 133);
+    color: rgb(0, 0, 0);
+    text-align: center;
+    padding: 0px;
+    display: flex;
+    align-items: center;
+    justify-content: center; /* Center align horizontally */
+        }
+        h2, h3, p, ul li a {
+            color: #ffffff; /* Set font color to white */
+        }
+        nav ul {
+            color: darkred;
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-right: 10px;
+        }
+        .featured {
+            background-color: #000000;
+            padding: 50px;
+            margin-bottom: 0px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between; /* Adjust alignment */
+        }
+        .featured img {
+            filter: grayscale(100%); /* Convert image to black and white */
+            max-width: 60%; /* Increase image size */
+            height: auto;
+            transition-property: inherit;
+            justify-content: center;
+        }
+        .featured section {
+            width: 100%; /* Adjust width of section */
+        }
+        .featured h3 {font-size: 34px;}
+        .featured p {font-size: 18px;}
+        .featured a,
+        .other-stories a {
+            text-decoration: none;
+            color: darkred;
+            font-weight: bold;
+        }
+        .other-stories {
+            background-color: darkred; /* Change background color to dark red */
+            max-width: 1500px; /* Limit the width of the container */
+            margin: 0 auto; /* Center the container horizontally */
+            text-align: center; /* Center the content horizontally */
+            display: flex;
+            flex-direction: column;
+            align-items: center; /* Center content horizontally */
+            position: relative; /* Position relative to allow absolute positioning of title */
+            padding-top: 50px; /* Add padding to create space for the title */
+            padding-bottom: 50px;
+        }
+        .other-stories h2 {
+            color: #ffffff; /* Set font color of the title to white */
+        }
+        .other-stories a {
+            color: #ffffff; /* Set font color of article links to white */
+            text-decoration: none;
+            margin-top: 10px; /* Add margin between article links */
+        }
+        .story-container {
+            display: flex;
+            justify-content: space-between; /* Adjust alignment */
+            flex-wrap: wrap;
+            margin-top: 20px; /* Adjusted margin to separate articles from the title */
+            width: 100%; /* Ensure full width */
+        }
+        .story {
+            flex: 0 0 calc(33.33% - 20px); /* Adjusted width for each article */
+            margin: 0 10px 20px 10px; /* Adjusted margin around each article */
+            text-align: center; /* Align text to the center */
+        
+        }
+        .story img {
+            max-width: 100%; /* Adjusted size for the images */
+            height: auto;
+            margin-bottom: 10px; /* Adjust margin between image and title */
+        }
+        .small-image {
+            max-width: 80px;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="LogoAI.jpeg.png" alt="Logo" height="75" width="75">
+        </div>
+        <div>
+            <h1>ATHLETIC INSIGHT</h1>
+        </div>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="362AiArticle Options.html">ANALYSIS</a></li>
+                <li><a href="Search.html">SCORES</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="featured">
+        <section>
+            <h2>FEATURED:</h2>
+            <h3>RECAPPING NFL FREE AGENCY</h3>
+            <p>A recap and analysis of the busiest NFL Free Agency period in years.</p>
+            <a href="AiArticle.html">CLICK HERE FOR FULL STORY</a> 
+        </section>
+        <img src="https://www.thebaltimorebanner.com/resizer/siG8Tsvv2Do_RyEBKQwt4-zREKI=/1440x0/filters:format(jpg):quality(70):focal(2047x494:2057x504)/cloudfront-us-east-1.images.arcpublishing.com/baltimorebanner/BVXVMN3FK5FJ5NMWGTLV2JLG6Y.jpg" alt="Main" height="650px" width="650px">
+    </section>
+    <section class="other-stories">
+        <h2>OTHER STORIES</h2>
+        <div class="story-container">
+            <div class="story">
+                <img class="small-image" src="https://ca-times.brightspotcdn.com/dims4/default/0335932/2147483647/strip/true/crop/4200x2800+0+0/resize/1200x800!/quality/75/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F71%2F6e%2F6474b46c4a329a19518a839c3dd2%2F1375374-sp-usc-ucla-151-gmf.jpg" alt="CW">
+                <a href="CalebWilliams.html">Caleb Williams to the Bears?</a>
+            </div>
+            <div class="story">
+                <img class="small-image" src="https://media-cldnry.s-nbcnews.com/image/upload/t_fit-1500w,f_auto,q_auto:best/rockcms/2024-04/240408-dawn-staley-championship-wm-317p-69a92c.jpg" alt="Dawn Staley">
+                <a href="SCAR.html">Dawn's Dynasty is Born</a>
+            </div>
+            <div class="story">
+                <img class="small-image" src="https://www.masslive.com/resizer/vJiNsq_NPgJo0MmpQMsG5kImIQg=/1280x0/smart/cloudfront-us-east-1.images.arcpublishing.com/advancelocal/YZ2ZOK7AQRGLZNL34WLE3MMA3Q.jpg" alt="Terry Rozier">
+                <a href="TerryRozier.html">Terry Rozier's Impact on the Heat</a>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p> Follow on all Social Media Platforms @athleticinsight.</p>
+    </footer>
+</body>
+</html>
+

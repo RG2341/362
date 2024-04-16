@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ATHLETIC INSIGHT</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            background-color: black;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh; /* Ensure the body covers the full viewport height */
+        }
+        header {
+            background-color: white;
+            color: black;
+            text-align: center;
+            padding: 5px;
+            position: relative; /* Set position relative for absolute positioning of logo */
+        }
+        footer {
+            background-color: darkred;
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            margin-top: auto; /* Push the footer to the bottom */
+        }
+        h1 {
+            font-size: 32px;
+            margin: 0;
+            padding: 20px;
+            text-align: center;
+            color: black;
+        }
+        nav {
+            color: darkred;
+            text-align: right;
+        }
+        nav ul {
+            list-style-type: none;
+            margin: 0;
+            padding: 0;
+        }
+        nav ul li {
+            display: inline;
+            margin-left: 10px;
+        }
+        nav ul li:first-child {
+            margin-left: 0;
+        }
+        nav ul li a {
+            color: darkred;
+            text-decoration: none;
+        }
+        .search-bar {
+            margin-top: 50px;
+            text-align: center;
+        }
+        .search-bar input[type="text"] {
+            width: 80%; /* Adjust the width of the search input */
+            padding: 15px;
+            border: 1px solid #ccc; /* Add a border */
+            border-radius: 10px; /* Rounded corners */
+            font-size: 18px;
+            outline: none; /* Remove outline */
+        }
+        .search-bar input[type="text"]::placeholder {
+            color: #999; /* Placeholder text color */
+        }
+        .search-bar input[type="text"]:focus {
+            border-color: darkred; /* Border color on focus */
+        }
+        /* Responsive styles */
+        @media (max-width: 600px) {
+            .search-bar input[type="text"] {
+                width: 100%; /* Adjust the width for smaller screens */
+            }
+            .api-info {
+                text-align: center;
+                margin-top: 10px;
+            }
+        }
+        .logo {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            width: 100px; /* Set width of the logo */
+            height: auto; /* Maintain aspect ratio */
+        }
+        /* Additional styling for scores */
+        .scores-container {
+            padding: 20px;
+            text-align: center;
+            color: white;
+        }
+        .score {
+            display: inline-block;
+            width: 200px; /* Set a fixed width for each score container */
+            margin: 10px; /* Add some margin between score containers */
+            padding: 20px;
+            background-color: #333;
+            border-radius: 5px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            cursor: pointer; 
+        }
+        .league-name {
+            font-size: 24px;
+            margin-bottom: 10px;
+        }
+        .team-name {
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        .team-logo {
+            width: 30px;
+            height: auto;
+            margin-right: 5px;
+        }
+        .game-status {
+            color: #ccc;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <img src="LogoAI.jpeg.png" alt="Athletic Insight Logo" class="logo">
+        <h1>ATHLETIC INSIGHT</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">HOME</a></li>
+                <li><a href="362AiArticle Options.html">ANALYSIS</a></li>
+                <li><a href="Search.html">SCORES</a></li>
+            </ul>
+        </nav>
+    </header>
+    <div class="search-bar">
+        <input type="text" id="search-input" placeholder="Search for Scores...">
+        <p class="api-info"> All scores provided by ESPN Public API. Athletic Insight does not own or update this.</p>
+    </div>
+    <div class="scores-container" id="scores-container">
+    </div>
+    <footer>
+        <p> All Times in EST | Follow on all social media platforms @athleticinsight</p>
+    </footer>
+</body>
+</html>
+<script src="script.js"></script>
