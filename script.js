@@ -145,7 +145,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <p class="game-status">${statusDisplay}</p>
                 </div>`;
             scoresContainer.innerHTML += scoreHTML;
-        });
+        }); 
     }
 
     function getLocalTime(date, timeZone) {
