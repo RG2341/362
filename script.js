@@ -3,11 +3,11 @@ document.addEventListener('DOMContentLoaded', function() {
     searchInput.addEventListener('input', filterScores);
 
     const leagues = [
-        { name: 'MLB', apiUrl: 'http://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard', events: [] },
-        { name: 'NBA', apiUrl: 'http://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard', events: [] },
-        { name: 'NCAA Men\'s Basketball', apiUrl: 'http://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard', events: [] },
+        { name: 'MLB', apiUrl: 'https://site.api.espn.com/apis/site/v2/sports/baseball/mlb/scoreboard', events: [] },
+        { name: 'NBA', apiUrl: 'https://site.api.espn.com/apis/site/v2/sports/basketball/nba/scoreboard', events: [] },
+        { name: 'NCAA Men\'s Basketball', apiUrl: 'https://site.api.espn.com/apis/site/v2/sports/basketball/mens-college-basketball/scoreboard', events: [] },
         { name: 'NCAA Women\'s Basketball', apiUrl: 'http://site.api.espn.com/apis/site/v2/sports/basketball/womens-college-basketball/scoreboard', events: [] },
-        { name: 'NFL', apiUrl: 'http://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard', events: [] }
+        { name: 'NFL', apiUrl: 'https://site.api.espn.com/apis/site/v2/sports/football/nfl/scoreboard', events: [] }
     ];
 
     leagues.forEach(league => fetchScores(league));
